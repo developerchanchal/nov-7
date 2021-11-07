@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #9b59b6;
+}
+.counter-section {
+    width: 700px;
+    height: 267px;
+    background: #3498db;
+    color: white;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3rem;
+}
+h1 {
+    background: #3498db;
+    font-size: 3rem;
+}
+p#timer {
+    background: #3498db;
+    font-size: 1.5rem;
+}

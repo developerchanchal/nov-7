@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coundown Timer</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="counter-section">
+        <h1>Website is Under Maintance !!!</h1>
+        <p id="timer"></p>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script>
+        var deadLine = new Date(" dec 10 , 2021 11:00:00 ").getTime();
+        var x= setInterval(function(){
+            var now = new Date().getTime();
+        var duration = deadLine - now;
+        console.log(duration);
+
+        var days = Math.floor(duration / (1000 * 60 * 60 * 24));
+        console.log(days);
+        var hours = Math.floor((duration % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        console.log(hours);
+        var mins = Math.floor((duration % (1000 * 60 * 60)) / (1000 * 60));
+        console.log(mins);
+        var sec = Math.floor((duration % (1000 * 60) / (1000)));
+        console.log(sec);
+
+        document.getElementById("timer").innerHTML ="Left: " + days + " Days " + hours + " Hours " + mins + " Mins " + sec + " Seconds ";
+        },1000);
+
+        if (duration < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+    }
+
+    </script>
+</body>
+
+</html>
